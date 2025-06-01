@@ -1,5 +1,5 @@
 const input = require('readline-sync');
-console.log("The Code is Running");
+console.log("This is a calculator, Add your first number, Operator sign, and your second number:");
 let num1 = parseFloat(input.question("Enter your first number: "));
 let sign = input.question("+,-, *, /?: ");
 let num2 = parseFloat(input.question("Enter your second number: "));
@@ -12,7 +12,7 @@ if (sign == "+") {
     console.log(`${num1} * ${num2} = ${num1 * num2}`)
 } else if (sign == "/") {
     if (num2 == 0){
-        console.log("You know how diving works right?")
+        console.log("You know how dividing works right?")
     }else {
         console.log(`${num1} / ${num2} = ${num1 / num2}`)
     }
