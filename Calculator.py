@@ -1,5 +1,7 @@
-sign = input("Enter your mathmatical sign here: ")
+
+
 num1 = input("Enter your first number: ")
+sign = input("Enter your mathmatical sign here: ")
 num2 = input("Enter your second number: ")
 
 if sign == "+":
