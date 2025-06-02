@@ -1,9 +1,34 @@
-const input = require('readline-sync');
-console.log("This is a calculator, Add your first number, Operator sign, and your second number:");
-let num1 = parseFloat(input.question("Enter your first number: "));
-let sign = input.question("+,-, *, /?: ");
-let num2 = parseFloat(input.question("Enter your second number: "));
 
+
+//Defining input variable
+const input = require('readline-sync');
+console.log("This is a calculator, Add your first number, Operator sign, and your second number.");
+
+
+// defining what happens when NaN for num1
+let num1Input = input.question("Enter your first number: ");
+let num1 = parseFloat(num1Input);
+
+// Defining num1 NaN message
+if (isNaN(num1)){
+    console.log("You didnt enter a number in the first spot hommie, you gotta add spice to cook with a number if you want a real eqation.");
+    process.exit(1)
+}
+
+// Get the Operator
+let sign = input.question("+,-, *, /?: ");
+
+// Defining num2 NaN possibilty.
+let num2Input = input.question("Enter your second number: ");
+let num2 = parseFloat(num2Input);
+
+if (isNaN(num2)){
+    console.log("AYO, Your sexond number isnt right big daw, you gotta put a valid number.");
+    process.exit(1)
+}
+
+
+// Doing the math here--
 if (sign == "+") {
     console.log(`${num1} + ${num2} = ${num1 + num2}`);
 } else if(sign == '-') {
